@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <title></title>
-    <link rel="stylesheet" media="screen and (min-width:320px) and (max-width:1023px)" href="./css/320.css"/>
-    <link rel="stylesheet" media="screen and (min-width:1024px)" href="./css/1024.css"/>
-    <style>
-*{
+  *{
     margin:0;
     padding: 0;
 }
@@ -17,17 +14,13 @@
 }
 .top_title{
     margin: 0 auto;
-    width: 1000px;
+    width: auto;
     height: 32px;
     line-height: 32px;
     box-sizing: border-box;
 }
 .top_title_name{
-    float: left;
-    display: block;
-    font-size: 14px;
-    color:#CCCCCC;
-    text-decoration: none;
+    display: none;
 }
 .top_title_right{
     float: right;
@@ -40,45 +33,22 @@
 .top_title_right>div{
     float: left;
 }
-.top_title_right>div:nth-child(2){
+.top_title_right > div:nth-child(2) {
     line-height: 32px;
-    margin: 0 10px 0 15px;
+    margin: 0 15px 0 10px;
 }
-.top_title_right img{
+.top_title_right img {
     position: relative;
+    top: -2px;
     width: 83px;
     height: 19px;
-    top: -2px;
     vertical-align: middle;
 }
-.top_title_right > div:nth-child(3) {
-    position: relative;
-    top: 1px;
-    display: block;
+.top_title_right > div:nth-child(3){
+    display: none;
 }
-.top_title_right > div:nth-child(3) input{
-    width: 111px;
-    height: 24px;
-    float: left;
-    padding-left: 5px;
-    font-size: 12px;
-    color: silver;
-    border: 2px solid #b1b1b1;
-    outline: none;
-}
-.top_title_right > div:nth-child(3) button{
-    float: left;
-    height: 28px;
-    color: white;
-    outline: none;
-    border-style: none;
-    background-color: #008c00;
-    padding: 0 10px;
-    line-height: 28px;
-}
-.top_title_right > div:nth-child(3) button:hover{
-    background-color: #bd0000;
-}
+
+
 .logo{
     width: auto;
     background-color: white;
@@ -86,178 +56,141 @@
 }
 .logo_menu{
     margin: 0 auto;
-    width: 1000px;
+    width: auto;
     height: 100px;
 }
 .logo_left{
-    width: 210px;
-    height: 77px;
+    width: 160px;
+    height: 60px;
     float: left;
-    margin: 11.5px 0;
+    margin: 20px 0;
 }
 .logo_left>img{
-    width: 210px;
-    height: 77px
-}.logo_left{
-     width: 210px;
-     height: 77px;
-     float: left;
-     margin: 11.5px 0;
- }
-.logo_left>img{
-    width: 210px;
-    height: 77px
+    width: 160px;
+    height: 60px
 }
 .menubtn{
+    float: right;
+    margin: 20px 20px;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    background-color:#00c600 ;
+}
+.menubtn>div{
+    width: 30px;
+    height: auto;
+    margin: 20px auto;
+}
+.menubtn span{
+    display: block;
+    width: 30px;
+    margin: 3px auto;
+    border-radius: 3px;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+.menu {
+    position: absolute;
     display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.menu ul {
+    overflow: hidden;
+    margin-top: 32px;
 }
 .close{
-    display: none;
-}
-.menu{
-    display: block;
-    position: relative;
-    width: auto;
-    height: auto;
-    float: right;
-    background-color: transparent;
-}
-.menu>div{
-    display: block;
-}
-.menu ul{
-    overflow: hidden;
-    margin-top:0;
-}
-.menu li{
-    float: left;
-    list-style: none;
-    width: 80px;
-    line-height: 80px;
-    border-top:3px solid transparent;
-    box-sizing: border-box;
-    margin: 0 5px;
-    text-align: center;
-    padding-left: 0;
-    background-color: transparent;
-    border-bottom: transparent;
-}
-.menu li:hover{
-    border-color: #00c400;
-}
-.menu li a{
-    text-decoration: none;
-    font-size: 14px;
-    color: black;
-    font-weight: bold;
-}
-.menu li a:hover{
-    color:#00c400 ;
-}
-.menu >div{
     position: absolute;
-    font-size: 12px;
-    top: 60px;
-}
-.menu>div span{
-    display: inline-block;
-    float: left;
-    margin: 0 5px;
-    width: 80px;
-    color: silver;
+    display: block;
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    top: 5px;
+    border-radius: 3px;
+    background-color: #00b000;
+    color: white;
     text-align: center;
+    line-height: 20px;
+}
+.menu li {
+    list-style: none;
+    width: 100%;
+    line-height: 32px;
+    text-align: left;
+    padding-left: 15px;
+    background-color: #00c600;
+    border-bottom: 1px solid white;
 }
 
-.main{
-    position: relative;
-    height: 651px;
-    width: auto;
+.menu li:hover {
+    border-color: #00c400;
 }
-.mainImg {
-    position: absolute;
-    width: 100%;
-    height: 651px;
-    z-index: -1;
-    background-image: url("../img/h.jpg");
-    background-position: center;
-}
-.picture{
-    width: 1000px;
-    height: 300px;
-    margin: 0 auto;
-}
-.picture>img:nth-child(2){
-    position: absolute;
-    top: 50px;
-}
-.mainContent{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 194px;
-    background-color: rgba(0, 0, 0, 0.61);
-}
-.main_txt{
-    width: 1000px;
-    height: 194px;
-    margin: 0 auto;
-}
-.main_animate{
-    width: 1000px;
-    height: 32px;
-    line-height: 32px;
-    color: white;
+
+.menu li a {
     font-size: 14px;
-    background: url(../img/4.png) no-repeat left;
-    padding-left: 25px;
-    margin-top: 4px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
 }
-.main_animate>span,.main_animate>div{
-    float: left;
+
+.menu li:hover a {
+    color: #00df00;
 }
-.main_animate>div{
-    width: 800px;
-    margin-left: 10px;
-    font-size: 12px;
-    color: #adadad;
+
+.menu > div {
+    display: none;
 }
 .main_list{
-    width: 1000px;
-    height: 144px;
+    width: auto;
+    height: 5rem;
     clear: both;
+    overflow: hidden;
 }
 .main_list>div{
+    width: 20%;
+    height: 5rem;
     float: left;
-    width: 125px;
-    height:144px;
     background-color: #355D54;
     text-align: center;
+    overflow: hidden;
 }
 .main_list>div:nth-child(1){
     background-color:#01CA3E;
 }
 .main_list>div img{
     display: block;
-    width: 61px;
-    height: 44px;
-    margin-left: 32px;
-    margin-top: 40px;
+    width: 50%;
+    height: 50%;
+    margin-left:25%;
+    margin-top: 16%;
 }
 .main_list>div span{
     display: block;
     font-size: 13px;
     color: white;
-    margin-top: 20px;
 }
 .main_list>div:hover{
     background-color: #01CA3E;
 
 }
-
-
-
-
+.picture{
+    width: auto;
+    margin: 0 auto;
+    height: 300px;
+}
+.picture>img:nth-child(2){
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 60%;
+}
+.picture>img:nth-child(1){
+    width: 60%;
+}
     </style>
 </head>
 <body>
